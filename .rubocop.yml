@@ -1,0 +1,64 @@
+require:
+  - rubocop-performance
+  - rubocop-rspec
+
+# Faz o merge das configurações que estão sendo sobreescritas ao invés de substituir tudo
+inherit_mode:
+  merge:
+    - Exclude
+
+# Define a versao do ruby que estamos utilizando para o rubocop verificar erros de sintaxe corretamente
+AllCops:
+  TargetRubyVersion: 2.6
+  Exclude:
+    - 'db/schema.rb'
+    - 'public/**/*'
+    - 'node_modules/**/*'
+    - 'bin/**/*'
+
+# Modo rails não é ativado por padrão
+Rails:
+  Enabled: true
+
+# Quantidade máxima de caracteres em linha
+Metrics/LineLength:
+  Exclude:
+    - 'spec/**/*.rb'
+  Max: 120
+
+# Quantidade máxima de linhas em uma classe
+Metrics/ClassLength:
+  Enabled: false
+
+# Quantidade máxima de linhas em um bloco
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb'
+
+# Quantidade máxima de linhas em um método
+Metrics/MethodLength:
+  Enabled: false
+
+# Permitir utilizar caracteres acentuados nos comentários
+Style/AsciiComments:
+  Enabled: false
+
+# Quando utilizar chamadas de metodos em mais de uma linha colocar o ponto no fim da linha anterior
+Style/DotPosition:
+  EnforcedStyle: trailing
+
+Style/MultilineMethodCallIndentation:
+  Enabled: false
+
+Style/CaseIndentation:
+  Enabled: false
+
+Style/MultilineOperationIndentation:
+  Enabled: false
+
+# Ignorar comentários nas classes
+Style/Documentation:
+  Enabled: false
+
+Layout/AlignHash:
+  Enabled: false

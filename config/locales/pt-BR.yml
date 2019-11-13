@@ -1,0 +1,19 @@
+'pt-BR':
+  hello: Olá Mundo
+  activerecord:
+    time_parking: '%{value} minutos'
+    errors:
+      messages:
+        plate_presence: o veículo está no estacionamento
+        valid_left: para sair é necessário realizar o pagamento
+    models:
+      parking: Estacionamento
+    attributes:
+      parking:
+        plate: Placa
+        paid: Pagamento
+        left: Saída
+        arrived_at: Data e hora da entrada
+        left_at: Data e hora da saída
+        payment_at: Data e hora do pagamento
+        
